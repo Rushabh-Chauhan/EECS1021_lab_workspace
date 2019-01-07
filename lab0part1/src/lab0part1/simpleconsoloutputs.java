@@ -1,6 +1,6 @@
 package lab0part1;
 
-public class simpleoutputs 
+public class simpleconsoloutputs 
 {
 	public static void main (String args [])
 	{
