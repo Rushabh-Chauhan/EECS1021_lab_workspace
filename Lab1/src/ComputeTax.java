@@ -17,7 +17,7 @@ public class ComputeTax {
 		if(f==1)
 		{
 			System.out.println(n+", enter your taxable income:");
-			i=input.nextInt();
+			i=input.nextDouble();
 			k=i;
 			c=i;
 			if(i<=8350)
@@ -49,7 +49,7 @@ public class ComputeTax {
 		else if(f==2)
 		{
 			System.out.println(n+", enter your taxable income:");
-			i=input.nextInt();
+			i=input.nextDouble();
 			k=i;
 			c=i;
 			if(i<=16700)
