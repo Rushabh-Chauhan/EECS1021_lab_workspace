@@ -29,7 +29,7 @@ public class PrintBetweenNumbers2 {
 			  System.out.println("Error: Lower bound "+lb+" is not less than or equal to upper bound "+ub);
 			
 		  }
-		  System.out.println("Woeld you like to continue printing?( Enter Y for yes; N for no )");
+		  System.out.println("Would you like to continue printing?( Enter Y for yes; N for no )");
 		  String a= input.nextLine();
 		  if(a.equals("Y"))
 		  {
