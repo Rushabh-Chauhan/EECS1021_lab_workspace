@@ -46,6 +46,7 @@ public class MathSequence {
 			else if(yn.equals("N"))
 			{
 				k=1;
+				System.out.println("Bye!");
 			}
 			
 			
@@ -87,20 +88,120 @@ public class MathSequence {
 			else if(yn.equals("N"))
 			{
 				k=1;
+				System.out.println("Bye!");
 			}
 			
-			
-			
-			
-			
-			
-			
-			
-			
+				
 			
 		}//process 2 end
 		else if(process==3)
 		{
+			int c=0;
+			int d=9;
+			int m[]=new int[10];
+			
+			System.out.println("Enter a new number:");
+			 m[0]=input.nextInt();
+			 System.out.println("You have entered 1 numbers.");
+			 System.out.println("You may still enter another 9 numbers.");
+			 System.out.println("Would you like to enter another new number? (Y/N)");
+			 input.nextLine();
+			 String ch = input.nextLine();
+			 if(ch.equals("Y"))
+			 {
+				 for(int i=1;i<10;i++)
+				 {
+					 
+					 d--;
+					 System.out.println("Enter a new number:");
+					 m[i]=input.nextInt();
+					 System.out.println("You have entered "+(i+1)+" numbers.");
+					 if(i!=9)
+					 {
+						 System.out.println("You may still enter another "+d+" numbers.");
+						 System.out.println("Would you like to enter another new number? (Y/N)");
+						 input.nextLine();
+						 String ch2 = input.nextLine();
+						 if(ch2.equals("N"))
+						 {
+							 c=(i+1);
+							 break;
+							 
+						 }
+					 }
+					 else if(i==9)
+					 {
+						 System.out.println("You have entered the maximum number of numbers!");
+					 } 
+				 }
+				 
+					 int sum=0;
+					 System.out.print("<");
+					 for(int i=0;i<10;i++)//printing for
+					 {
+						 sum=sum+m[i];
+						 if(m[i]!=0)
+						 {
+							 System.out.print(m[i]+" ");
+						 }
+					 }
+					 System.out.println(">");
+					 
+					
+					 // checking for sequence
+					 int d1=m[1]-m[0];
+					 int d2=m[2]-m[1];
+					 if(d1==d2 || c==2)
+					 {
+						 System.out.print("first term "+m[0]);
+						 System.out.print(", common difference "+d1);
+						 System.out.print(", length  "+c);
+						 System.out.println(",  and sum "+sum);
+					 }
+					 else
+					 {
+						 System.out.println("is not an arithmetic sequence");
+					 }
+				 
+				 
+				 
+				 
+			 }// this is the first check for yess.
+			 else if(ch.equals("N"))
+			 {
+				 System.out.println("Error: we cannot infer the common difference from a sequence of size one."); 
+			 }
+			 
+			 
+			 System.out.println("Would you like to process another sequence? (Y/N)");
+				input.nextLine();
+				String yn=input.nextLine();
+				if(yn.equals("Y"))
+				{
+					
+				}
+				else if(yn.equals("N"))
+				{
+					k=1;
+					System.out.println("Bye!");
+					
+				}
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 		}//process 3 end
 		else
