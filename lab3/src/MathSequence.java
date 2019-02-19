@@ -131,6 +131,7 @@ public class MathSequence {
 					 }
 					 else if(i==9)
 					 {
+						 c=10;
 						 System.out.println("You have entered the maximum number of numbers!");
 					 } 
 				 }
@@ -174,7 +175,6 @@ public class MathSequence {
 			 
 			 
 			 System.out.println("Would you like to process another sequence? (Y/N)");
-				input.nextLine();
 				String yn=input.nextLine();
 				if(yn.equals("Y"))
 				{
