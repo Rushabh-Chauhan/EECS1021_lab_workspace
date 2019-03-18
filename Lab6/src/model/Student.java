@@ -27,9 +27,98 @@ public class Student {
 	
 	public void addCourse(String title) {
 		CourseRecord c = new CourseRecord(title);
-		this.courses[this.noc] = c;
-		this.noc++;
+		this.addCourse(c);
+//		this.courses[this.noc] = c;
+//		this.noc++;
 	}
+	
+	public int getMarks(String title)
+	{
+		int marks = 0;
+		int index = this.indexof(title);
+		if(index>=0)
+		{
+			CourseRecord c = this.courses[index];
+			marks = c.getMarks();
+		}
+		else
+		{
+			marks = -1;
+		}
+		
+		
+		
+		
+		return marks;
+	}
+	public void setMarks(String title, int marks)
+	{
+		int index = this.indexof(title);
+		if(index>=0)
+		{
+			CourseRecord c = this.courses[index];
+			 c.setMarks(marks);
+		}
+		else
+		{
+			marks = -1;
+		}
+
+	}
+	
+	int indexof(String title)
+	{
+		int index = -1;
+		boolean found = false;
+		for (int i = 0; i<this.noc && !found;i++)
+		{
+			if(this.courses[i].getTitle().equals(title))
+			{
+				found = true;
+				index = i;
+			}
+		}
+		
+		return index;
+	}
+	double getGPA()
+	{
+		double gpa = 0.0;
+		double gp = 0.0;
+		for(int i=0 ; i<this.noc;i++)
+		{
+			//CourseRecord c = this.courses[i];
+			String lg = this.courses[i].getLetterGrade();
+			if(lg.equals("A+"))
+			{
+				gp += 9;
+			}
+			else if(lg.equals("A"))
+			{
+				gp += 8;
+			}
+			else if(lg.equals("B"))
+			{
+				gp += 7;
+			}
+			else if(lg.equals("C"))
+			{
+				gp += 6;
+			}
+			else if(lg.equals("D"))
+			{
+				gp += 5;
+			}
+			else 
+			{
+				gp += 0;
+			}
+				
+		}
+		gpa = gp / this.noc;
+		return gpa;
+	}
+	
 	
 	public String getDescription()
 	{
@@ -43,7 +132,7 @@ public class Student {
 //		}
 		
 		 //version 2 this will also run;
-		result += "Student "+ this.name+" has required "+this.noc+" course:\n";
+		result += "Student "+ this.name+" has required "+this.noc+" course ( with GPA " + this.getGPA()+ ")\n";
 		for (int i=0; i<this.courses.length;i++)
 		{
 			if(this.courses[i] == null)

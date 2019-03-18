@@ -50,6 +50,38 @@ public class CourseRecord {
 	public void setInstructor(Faculty instructor) {
 		this.instructor = instructor;
 	}
+	
+	
+	public String getLetterGrade()
+	{
+		String lg = "";
+		if(this.marks >=90)
+		{
+			lg = "A+";
+		}
+		else if(this.marks >=80)
+		{
+			lg = "A";
+		}
+		else if(this.marks >=70)
+		{
+			lg = "B";
+		}
+		else if(this.marks >=60)
+		{
+			lg = "C";
+		}
+		else if(this.marks >=50)
+		{
+			lg = "D";
+		}
+		else
+		{
+			lg = "E";
+		}
+		
+		return lg;
+	}
 
 	public String getDescription()
 	 {
@@ -60,11 +92,11 @@ public class CourseRecord {
 		 //v2
 		if (this.instructor == null)
 		{
-			return "Course "+this.title+" (raw marks: "+this.marks+ ") has no instructor ";
+			return "Course "+this.title+" (raw marks: "+this.marks+" and letter grade "+ this.getLetterGrade() + ") has no instructor ";
 		}
 		else
 		{
-			return "Course "+this.title+" (raw marks: "+this.marks+ ") has instructor (" +this.instructor.getDescription()+")";
+			return "Course "+this.title+" (raw marks: "+this.marks+" and letter grade "+ this.getLetterGrade() + ") has no instructor ";
 		}
 	 }
 	
