@@ -75,9 +75,13 @@ public class CourseRecord {
 		{
 			lg = "D";
 		}
-		else
+		else if(this.marks >=40)
 		{
 			lg = "E";
+		}
+		else
+		{
+			lg = "F";
 		}
 		
 		return lg;
@@ -92,11 +96,11 @@ public class CourseRecord {
 		 //v2
 		if (this.instructor == null)
 		{
-			return "Course "+this.title+" (raw marks: "+this.marks+" and letter grade "+ this.getLetterGrade() + ") has no instructor ";
+			return "Course "+this.title+" (raw marks: "+this.marks+ ") has no instructor ";
 		}
 		else
 		{
-			return "Course "+this.title+" (raw marks: "+this.marks+" and letter grade "+ this.getLetterGrade() + ") has no instructor ";
+			return "Course "+this.title+" (raw marks: "+this.marks+" and letter grade "+ this.getLetterGrade() + ") has instructor ( "+ this.instructor.getDescription()+ ")";                  
 		}
 	 }
 	

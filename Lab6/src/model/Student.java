@@ -7,7 +7,7 @@ public class Student {
 //	CourseRecord cr2;
 //	CourseRecord cr3;
 //	CourseRecord cr4;
-//	CourseRecord cr5;
+//	CourseRecord cr5;0
 	
 	public CourseRecord[] courses; // each element in array stores the address of some CourseRecourd .
 	int noc; //number of courses.
@@ -132,7 +132,7 @@ public class Student {
 //		}
 		
 		 //version 2 this will also run;
-		result += "Student "+ this.name+" has required "+this.noc+" course ( with GPA " + this.getGPA()+ ")\n";
+		result += "Student "+ this.name+" has registered "+this.noc+" course ( with GPA " + this.getGPA()+ ")\n";
 		for (int i=0; i<this.courses.length;i++)
 		{
 			if(this.courses[i] == null)

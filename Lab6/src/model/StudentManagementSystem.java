@@ -1,5 +1,6 @@
 package model;
 
+
 public class StudentManagementSystem {
 	final int MAX_STUDENT = 1000;
 	public Student  std[];

@@ -1,0 +1,17 @@
+==================== (1)
+Month: 8
+Day: 4
+==================== (2)
+The birthday book is empty
+==================== (3)
+The birthday book has 3 entries:
+Alan: August 4
+Tom: August 4
+Mark: March 19
+
+==================== (4)
+Number of people born on August 4: 2
+People born on August 4: [Alan, Tom]
+==================== (5)
+Number of people born on August 4: 1
+People born on August 4: [Tom]
